@@ -1,0 +1,1 @@
+0 8 * * * root /tmp/run.sh >> /var/log/cron.log 2>&1
