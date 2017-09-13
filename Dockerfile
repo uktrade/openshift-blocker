@@ -17,4 +17,4 @@ COPY run.sh /run.sh
 RUN chmod 0644 /etc/cron.d/openshift-blocker && touch /var/log/cron.log && chmod +x /run.sh
 
 USER root:root
-CMD cron && tail -f /var/log/cron.log
+CMD env > /.env && cron && tail -f /var/log/cron.log
