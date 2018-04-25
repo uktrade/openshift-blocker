@@ -10,7 +10,7 @@ export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 X_SG_ID=($SG_ID)
 X_WHITELIST=($WHITELIST)
 
-for SG in $X_SG_ID; do
+for SG in $SG_ID; do
   aws ec2 revoke-security-group-egress --group-id $SG --ip-permissions "$(aws ec2 describe-security-groups --group-ids $SG | jq '.SecurityGroups[].IpPermissionsEgress')"
 done
 
