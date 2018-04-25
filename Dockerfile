@@ -8,7 +8,7 @@ ENV AWS_DEFAULT_REGION null
 
 RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
     apt-get update && \
-    apt-get install -y cron jq && \
+    apt-get install -y dnsutils cron jq && \
     pip install awscli && \
     rm -rf /var/lib/apt/lists/*
 
