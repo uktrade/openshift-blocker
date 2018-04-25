@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 
 env -
-export $(cat /.env | xargs)
+export "$(cat /.env | xargs)"
 
 X_SG_ID=($SG_ID)
 X_WHITELIST=($WHITELIST)
